@@ -64,7 +64,6 @@ function w(a) {
 s.extend(w, Notification);
 w.prototype.create = function() {
   var a = this, b = {type:"progress", title:"Bugheist", message:v.c("screenshot_plugin_uploading_window_capt"), iconUrl:"img/icon256.png", buttons:[{title:v.c("screenshot_plugin_cancel")}], isClickable:!0, progress:0};
-  chrome.tabs.create({ url: 'http://127.0.0.1:8000/?extension=true&W='+ this.W});
   50 <= n().da && (b.requireInteraction = !0);
   chrome.notifications.create(this.b, b, function() {
     a.k = "uploading";
@@ -270,7 +269,7 @@ J.prototype.t = function(a) {
 function K(a, b) {
   K.o.constructor.call(this, a, b);
   this.C = "5CE3DF4D45AC";
-  this.W = "http://127.0.0.1:8000/upload/{time}/{hash}/";
+  this.W = "http://bugheist.com/upload/{time}/{hash}/";
 }
 s.extend(K, G);
 m = K.prototype;
@@ -305,7 +304,7 @@ m.upload = function() {
   }, beforeSend:function(b) {
     a.t(b);
   }, complete:function(b, g) {
-    chrome.tabs.create({ url: 'http://127.0.0.1:8000/?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
+    chrome.tabs.create({ url: 'http://bugheist.com/?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
     //a.w(b, g);
   }});
 };
