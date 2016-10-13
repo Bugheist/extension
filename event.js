@@ -269,7 +269,7 @@ J.prototype.t = function(a) {
 function K(a, b) {
   K.o.constructor.call(this, a, b);
   this.C = "5CE3DF4D45AC";
-  this.W = "http://bugheist.com/upload/{time}/{hash}/";
+  this.W = "http://www.bugheist.com/upload/{time}/{hash}/";
 }
 s.extend(K, G);
 m = K.prototype;
@@ -304,7 +304,7 @@ m.upload = function() {
   }, beforeSend:function(b) {
     a.t(b);
   }, complete:function(b, g) {
-    chrome.tabs.create({ url: 'http://bugheist.com/?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
+    chrome.tabs.create({ url: 'http://www.bugheist.com?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
     //a.w(b, g);
   }});
 };
