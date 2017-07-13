@@ -304,7 +304,7 @@ m.upload = function() {
   }, beforeSend:function(b) {
     a.t(b);
   }, complete:function(b, g) {
-    chrome.tabs.create({ url: 'https://www.bugheist.com?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
+    chrome.tabs.create({ url: 'https://www.bugheist.com/report/?hash='+ tempvar + '&time='+ tempvartime +'&url=' + global_url});
     //a.w(b, g);
   }});
 };
